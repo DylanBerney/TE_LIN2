@@ -157,8 +157,7 @@ Commande 3 :
 ```python
 Dépot Github [6 pts]
 - 1 pt par fichier (5x)
-- 1 pt pour le dépot public
-
+- 1 pt pour le fichier readme.md avec les commandes 1,2, et 3
 Dépot Dockerhub [6 pts]
 - 3 pts par image avec tag et version (x2)
 
