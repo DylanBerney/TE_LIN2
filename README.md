@@ -1,5 +1,9 @@
 # Evaluation du module LIN2 [Docker]
 
+1. Vous avez 2 périodes (90 minutes) pour réaliser cet examen.
+2. A la fin de l'épreuve, vous devez m'avoir envoyé par email l'adresse de Github, de votre DockerHub ainsi qu'une archive contenant les 6 fichiers.
+3. Le POC doit avoir été validé avant la fin de l'évaluation.
+
 ## Objectifs
 
 L'objectif de ce TP est de créer des conteneurs et d'automatiser la phase de construction et de déploiement des conteneurs. Pour réaliser ce TP, il vous faudra respecter scrupuleusement les conventions de nommage et de configuration demandées.
@@ -121,8 +125,9 @@ Vous devrez également publier vos images sur un compte `Dockerhub` que vous a
 
 ```python
 **Information à envoyer par mail à crn@cpnv.ch**
-Adresse du dépot GitHub :
-Adresse de l'image Dockerhub :
+Adresse du dépot GitHub
+Adresse de l'image Dockerhub
+Archives contant les 6 fichiers
 ```
 
 ## **POC**
