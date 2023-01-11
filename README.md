@@ -2,15 +2,16 @@
 
 1. Vous avez 2 périodes (90 minutes) pour réaliser cet examen.
 2. A la fin de l'épreuve, vous devez m'avoir envoyé par email l'adresse de Github, de votre DockerHub ainsi qu'une archive contenant les 6 fichiers.
-3. Le POC doit avoir été validé avant la fin de l'évaluation.
+3. **Attention** : Si votre dépôt est mis à jour après la fin de l'épreuve, les fichiers présents ne seront pas pris en compte pour l'évaluation.
+4. Le POC doit avoir été validé avant la fin de l'évaluation.
 
 ## Objectifs
 
-L'objectif de ce TP est de créer des conteneurs et d'automatiser la phase de construction et de déploiement des conteneurs. Pour réaliser ce TP, il vous faudra respecter scrupuleusement les conventions de nommage et de configuration demandées.
+L'objectif de ce examen est de créer deux conteneurs et d'automatiser la phase de construction et de déploiement de ces deux conteneurs. Pour réaliser cet examen, il vous faudra respecter scrupuleusement les conventions de nommage et de configuration demandées.
 
 Il vous sera demandé de construire deux conteneurs communiquant entre eux. Ces deux conteneurs présentent des APIs simple permettant de communiquer entre eux. Ces deux applicatifs sont fournis et doivent uniquement être déployés, il ne s'agit donc pas de développement mais de mise en production, orienté système et services.
 
-Dans cet examen nous allons donc créer une application serveur et une application cliente en python.
+Dans cet examen nous allons donc créer une application **serveur** et une application **cliente** en python.
 
 1. L’API Serveur s’exécute d’abord et attend toute demande du client
 2. L’API Client lance la conversation au début.
@@ -63,7 +64,7 @@ if __name__ == '__main__':
     server_program()
 ```
 
-Notre serveur fonctionne sur le port 5000 et il attendra la demande du client. `Python while loop` est utilisé pour exécuter le programme serveur indéfiniment et continuer à attendre la demande du client. Il est recommandé d’utiliser l’adresse de port supérieure à 1024 car le numéro de port inférieur à 1024 est réservé au protocole Internet standard.
+Notre serveur fonctionne par défault sur le port 5000 et il attendra la demande du client. `Python while loop` est utilisé pour exécuter le programme serveur indéfiniment et continuer à attendre la demande du client. Il est recommandé d’utiliser l’adresse de port supérieure à 1024 car le numéro de port inférieur à 1024 est réservé au protocole Internet standard.
 
 ### API Client
 
@@ -125,14 +126,14 @@ Vous devrez également publier vos images sur un compte `Dockerhub` que vous a
 
 ```python
 **Information à envoyer par mail à crn@cpnv.ch**
-Adresse du dépot GitHub
+Adresse du dépôt GitHub
 Adresse de l'image Dockerhub
-Archives contant les 6 fichiers
+Archive contant les 6 fichiers présents dans le dépôt
 ```
 
 ## **POC**
 
-1. Exécutez votre `docker-compose.yaml` afin de créer les deux containers et initialiser les 2 API, en premier le Serveur suivie ensuite du Client.
+1. Exécutez votre `docker-compose.yaml` afin de créer automatiquement les deux containers et initialiser les 2 API, en premier le Serveur suivie ensuite du Client.
 
 ```python
 **Information à mettre dans le fichier readme.md**
