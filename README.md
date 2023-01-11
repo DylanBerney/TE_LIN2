@@ -1,5 +1,7 @@
 # Evaluation du module LIN2 [Docker]
 
+https://github.com/7ric/TE_LIN2
+
 1. Vous avez 2 périodes (90 minutes) pour réaliser cet examen.
 2. A la fin de l'épreuve, vous devez m'avoir envoyé par email l'adresse de Github, de votre DockerHub ainsi qu'une archive contenant les 6 fichiers.
 3. **Attention** : Si votre dépôt est mis à jour après la fin de l'épreuve, les fichiers présents ne seront pas pris en compte pour l'évaluation.
