@@ -164,6 +164,7 @@ Commande 3 :
 Dépot Github [6 pts]
 - 1 pt par fichier (5x)
 - 1 pt pour le fichier readme.md avec les commandes 1,2, et 3
+
 Dépot Dockerhub [6 pts]
 - 3 pts par image avec tag et version (x2)
 
@@ -174,4 +175,6 @@ POC réussi : [12 pts]
 4. [1 pts]
 5. [1 pts]
 6. [1 pts]
+
+Note finale : Nombre de points / 24 * 5 + 1 (Arrondi au demi-point)
 ```
