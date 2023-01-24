@@ -129,6 +129,7 @@ Vous devrez faire un fork du dépôt `Github` afin de récupérer les deux appli
 │   └── socket_client.py
 └── docker-compose.yaml
 └── readme.md
+└── tp.md
 ```
 ## Partie 2
 
@@ -152,6 +153,7 @@ Un fichier `docker-compose-2.yaml` sera créé pour le déploiement des deux app
 └── docker-compose.yaml
 └── docker-compose-2.yaml
 └── readme.md
+└── tp.md
 ```
 
 # 5. Evaluation
@@ -166,7 +168,7 @@ Adresse du dépôt GitHub :
 Adresse de l'image Dockerhub :
 ```
 
-Remplacer le fichier `readme.md`et répondez aux questions ci-dessous :
+Répondez aux questions du fichier `tp.md`
 
 ```
 Nom :
