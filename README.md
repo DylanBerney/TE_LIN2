@@ -156,15 +156,15 @@ Un fichier `docker-compose-2.yaml` sera créé pour le déploiement des deux app
 
 # 5. Evaluation
 
+<aside>
+⚠️ Aucune modification ne doit être faite sur le dépôt GitHub et le dépôt DockerHub après l'heure de fin de l'évaluation.
+</aside>
+
 ```python
 **Information à envoyer par mail à crn@cpnv.ch**
 Adresse du dépôt GitHub :
 Adresse de l'image Dockerhub :
 ```
-
-<aside>
-⚠️ Aucune modification ne doit être faite sur le dépôt GitHub et le dépôt DockerHub après l'heure de fin de l'évaluation.
-</aside>
 
 Remplacer le fichier `readme.md`et répondez aux questions ci-dessous :
 
