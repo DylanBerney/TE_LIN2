@@ -166,7 +166,8 @@ Adresse de l'image Dockerhub :
 ⚠️ Aucune modification ne doit être faite sur le dépôt GitHub et le dépôt DockerHub après l'heure de fin de l'évaluation.
 </aside>
 
-Répondez aux questions du fichier : `readme.md`
+Remplacer le fichier `readme.md`et répondez aux questions ci-dessous :
+
 ```
 Nom :
 Prénom :
