@@ -1,19 +1,33 @@
 # Evaluation du module LIN2 [Docker]
 
-https://github.com/7ric/TE_LIN2
+Classe : SI-T1b
 
-1. Vous avez 2 périodes (90 minutes) pour réaliser cet examen.
-2. A la fin de l'épreuve, vous devez m'avoir envoyé par email l'adresse de Github, de votre DockerHub ainsi qu'une archive contenant les 6 fichiers.
-3. **Attention** : Si votre dépôt est mis à jour après la fin de l'épreuve, les fichiers présents ne seront pas pris en compte pour l'évaluation.
-4. Le POC doit avoir été validé avant la fin de l'évaluation.
+Date : 26 janvier 2023 de 13h30 à 15h00 (2 périodes)
 
-## Objectifs
+# 1. Objectifs
 
-L'objectif de ce examen est de créer deux conteneurs et d'automatiser la phase de construction et de déploiement de ces deux conteneurs. Pour réaliser cet examen, il vous faudra respecter scrupuleusement les conventions de nommage et de configuration demandées.
+- Connaître les caractéristiques d’un conteneur Linux
+- Savoir installer et utiliser Docker
+- Maîtriser la création des images Docker et les Dockerfile
+- Savoir interagir avec le Docker Hub et des registry privés
+- Maîtriser les notions réseaux de Docker (networks, links)
+- Maîtriser la gestion des données avec Docker (volumes)
+- Savoir utiliser Docker Compose
 
-Il vous sera demandé de construire deux conteneurs communiquant entre eux. Ces deux conteneurs présentent des APIs simple permettant de communiquer entre eux. Ces deux applicatifs sont fournis et doivent uniquement être déployés, il ne s'agit donc pas de développement mais de mise en production, orienté système et services.
+# 2. Introduction
 
-Dans cet examen nous allons donc créer une application **serveur** et une application **cliente** en python.
+Lors de cette évaluation vous allez automatiser la phase de construction et déployer deux conteneurs Docker. Deux `Dockerfile`  et un `docker-compose.yaml` seront remis à la fin de l’épreuve. Un dépôt personnel docker sera créé pour héberger les 2 images précédemment créées. Un second `docker-compose.yaml` sera créé pour déployer l’infrastructure à partir de votre Docker Hub personnel.  Une démonstration du fonctionnement de votre infrastructure déployée à partir de votre dépôt personnel devra être réalisée avant la fin de votre épreuve. 
+
+<aside>
+⚠️ Pour réaliser cette épreuve, il vous faudra respecter scrupuleusement les conventions de nommage et de configuration demandées.
+
+</aside>
+
+## Déroulement
+
+Il vous sera demandé de construire deux conteneurs simples permettant de communiquer entre eux. Les deux applicatifs python (`socket_server.py` et `socket_client.py`) sont fournis et doivent uniquement être déployés, il ne s'agit donc pas de développement mais de mise en production, orienté système et services.
+
+Dans cet examen vous allez donc déployer à l’aide de docker une application serveur et une application cliente en python.
 
 1. L’API Serveur s’exécute d’abord et attend toute demande du client
 2. L’API Client lance la conversation au début.
@@ -23,14 +37,14 @@ Dans cet examen nous allons donc créer une application **serveur** et une appli
 
 # Les API (Application Programming Interface)
 
-Les applications sont publiées sur ce dépôt Github :
+Les applications sont les suivantes :
 
 - **API Serveur**: `socket_server.py`
 - **API Client** : `socket_client.py`
 
 Chaque API est codé en Python. 
 
-### **API Serveur**
+## **API Serveur**
 
 `socket_server.py`
 
@@ -66,9 +80,9 @@ if __name__ == '__main__':
     server_program()
 ```
 
-Notre serveur fonctionne par défault sur le port 5000 et il attendra la demande du client. `Python while loop` est utilisé pour exécuter le programme serveur indéfiniment et continuer à attendre la demande du client. Il est recommandé d’utiliser l’adresse de port supérieure à 1024 car le numéro de port inférieur à 1024 est réservé au protocole Internet standard.
+Notre serveur fonctionne sur le port 5000 et il attendra la demande du client. `Python while loop` est utilisé pour exécuter le programme serveur indéfiniment et continuer à attendre la demande du client. Il est recommandé d’utiliser l’adresse de port supérieure à 1024 car le numéro de port inférieur à 1024 est réservé au protocole Internet standard.
 
-### API Client
+## API Client
 
 `socket_client.py`
 
@@ -98,7 +112,7 @@ if __name__ == '__main__':
     client_program()
 ```
 
-### Exemple de fonctionnement
+## Exemple de fonctionnement
 
 1. Exécutez d’abord le programme serveur. 
 2. Exécutez ensuite le programme client . 
@@ -108,7 +122,7 @@ if __name__ == '__main__':
 
 ![python-socket-example.gif](Evaluation%20du%20module%20LIN2%20%5BDocker%5D%20da6e7e686a6e44a2a425e36dae3181e0/python-socket-example.gif)
 
-## Rendu
+# Rendu
 
 Vous devrez faire un fork du dépôt `Github` afin de récupérer les deux applications et de pouvoir envoyer vos modifications sur votre dépôt. Vous devrez mettre à disposition deux `Dockerfile` (un par application) ainsi qu'un fichier `docker-compose.yaml` pour le déploiement automatique des deux applications. Vous devriez avoir une arborescence telle que :
 
@@ -128,14 +142,13 @@ Vous devrez également publier vos images sur un compte `Dockerhub` que vous a
 
 ```python
 **Information à envoyer par mail à crn@cpnv.ch**
-Adresse du dépôt GitHub
-Adresse de l'image Dockerhub
-Archive contant les 6 fichiers présents dans le dépôt
+Adresse du dépot GitHub :
+Adresse de l'image Dockerhub :
 ```
 
-## **POC**
+# **POC**
 
-1. Exécutez votre `docker-compose.yaml` afin de créer automatiquement les deux containers et initialiser les 2 API, en premier le Serveur suivie ensuite du Client.
+1. Exécutez votre `docker-compose.yaml` afin de créer les deux containers et initialiser les 2 API, en premier le Serveur suivie ensuite du Client.
 
 ```python
 **Information à mettre dans le fichier readme.md**
@@ -160,12 +173,12 @@ Commande 3 :
 2. Tapez `Hello` dans le Serveur. Le message `Hello` doit apparaitre sur le Client.
 3. Taper `bye` dans le Client. Le Serveur et le Client doivent se fermer.
 
-## Evaluation
+# Evaluation
 
 ```python
 Dépot Github [6 pts]
 - 1 pt par fichier (5x)
-- 1 pt pour le fichier readme.md avec les commandes 1,2, et 3
+- 1 pt pour le dépot public
 
 Dépot Dockerhub [6 pts]
 - 3 pts par image avec tag et version (x2)
@@ -177,6 +190,4 @@ POC réussi : [12 pts]
 4. [1 pts]
 5. [1 pts]
 6. [1 pts]
-
-Note finale : Nombre de points / 24 * 5 + 1 (Arrondi au demi-point)
 ```
