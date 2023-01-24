@@ -1,3 +1,4 @@
+```
 Nom :
 Prénom :
 Classe :
@@ -8,3 +9,4 @@ Quelle est la commande pour se connecter avec un terminal et interagir avec l'ap
 Quelle est la commande pour se connecter avec un terminal et interagir avec l'application cliente ?
 Quelle est la commande pour transformer le container serveur en une image ?
 Quelle est la commande pour pousser l'image précédemment créée sur dépôt personnel ?
+```
