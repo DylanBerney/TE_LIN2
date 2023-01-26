@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+    build:
+    context: ./home/cpnv
+    dockerfile: Dockerfile
+    container_name: ankoden/lin2-server
+  restart: unless-stopped
+  ports:
+    - 5000:5000
+
+version: '3'
+services:
+  app:
+    build:
+    context: ./home/cpnv
+    dockerfile: Dockerfile
+  container_name: ankoden/lin2-client
+  restart: unless-stopped
